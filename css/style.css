@@ -2,6 +2,115 @@ body{
 	background-color: #3C948B;
 }
 .container{
-	width: 1024px;
 	background-color: #E1E1E1;
+}
+#top-head{
+	background-color: #FFF;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+#top-head ul{
+	margin: 0;
+	padding: 5px 10px;
+	list-style: none;
+}
+#top-head li{
+	float: left;
+	padding: 0px 10px;
+	position: relative;
+}
+#top-head li a{
+	font-size: 13px;
+	color: #1f2228;
+	transition: 0.1s color;
+}
+#top-head li a:hover{
+	text-decoration: none;
+	color: #3498db;
+}
+#top-head #top-nav li:after{
+	right: 0px;
+	content: '';
+	height: 10px;
+	top: 5px;
+	position: absolute;
+	border-right: 1px solid #bdc3c7;
+}
+#top-head #top-nav li:last-child:after{
+	border: none;
+}
+.currency-table, .language-table{
+	margin:5px 0;
+}
+.language-table td.flag{
+	vertical-align: middle;	
+	padding: 2px 0px 2px 8px;	
+}
+.language-table td.country{
+	vertical-align: middle;	
+	padding: 2px 8px 2px 5px;	
+}
+.language-table tr:hover, .currency-table tr:hover{
+	background: #f7f7f7;	
+}
+.flag span{
+	width: 19px;
+	height: 12px;
+	background: url('../img/language-icons.png') no-repeat;
+	margin-right: 2px;
+	display: block;
+}
+span.english-flag{
+	background-position: 0px 0px;	
+}
+span.spanish-flag{
+	background-position: -75px 0px;	
+}
+#top-head a.flag>span{
+	display: inline-block;
+	margin-right: 7px;	
+}
+.box-dropdown{
+	position: absolute;
+	overflow: hidden;
+	right: 0px;
+	width: 0px;
+	height: 0px;
+	top: 200%;
+	padding-top: 13px!important;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.box-dropdown .box-wrapper{
+	border-top: 3px solid #34495e;
+	background: #fff;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	padding: 10px 15px 15px;
+}
+.box-dropdown:after{
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-bottom: 10px solid #34495e;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	position: absolute;
+	right: 30px;
+	top: 5px;
+}
+#top-head li:hover ul.box-dropdown{
+	width: auto;
+	height: auto;
+	opacity: 1;
+	top: 100%;
+}
+.no-padding{
+	padding: 0px!important;	
+}
+.currency-table td{
+	padding: 2px 10px!important;
+	white-space: nowrap;	
+	font-size: 13px;
 }
