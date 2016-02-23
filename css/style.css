@@ -2,6 +2,9 @@ body{
 	background-color: #fff;
 	font-family: Ubuntu, sans-serif;
 }
+.web-general{
+	max-width: 1002px;
+}
 .container{
 	background-color: #E1E1E1;
 }
@@ -46,12 +49,6 @@ body{
 #top-head #top-nav li:last-child:after{
 	border: none;
 }
-#top-head li:hover ul.box-dropdown, #middle-head li:hover ul.box-dropdown{
-	width: auto;
-	height: auto;
-	opacity: 1;
-	top: 100%;
-}
 .currency-table td{
 	padding: 2px 10px!important;
 	white-space: nowrap;
@@ -84,15 +81,21 @@ span.spanish-flag{
 	display: inline-block;
 	margin-right: 7px;	
 }
+li:hover ul.box-dropdown{
+	width: auto!important;
+	height: auto!important;
+	opacity: 1;
+	top: 100%;
+}
 .box-dropdown{
 	z-index: 9999;
 	position: absolute;
 	overflow: hidden;
 	right: 0px;
-	width: 0px;
-	height: 0px;
-	top: 200%;
+	width: 0px!important;
+	height: 0px!important;
 	padding-top: 13px!important;
+	top: 200%;
 	opacity: 0;
 	transition: all 0.3s;
 }
@@ -148,22 +151,22 @@ span.spanish-flag{
 }
 #user-nav .user-nav-login{
 	color: #53686A;
-	width: 250px;
+	max-width: 253px;
 	height: 50px;
 	display: block;
 	text-align: center;
-	padding: 10px 0px;
+	padding: 10px 15px;
 	background-color: #fff;
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
 }
 #user-nav .user-nav-login a{
 	color: #000!important;
+	text-decoration: none;
 	transition: 0.1s all;
 }
 #user-nav .user-nav-login a:hover{
 	color: #79C142!important;
-	text-decoration: none;
 }
 #user-nav .user-border{
 	border-top-right-radius: 2px!important;
@@ -172,6 +175,128 @@ span.spanish-flag{
 #user-nav i.icon{
 	display: block;
 }
+#main-nav>ul, #main-nav>ul>li>ul, #main-nav>ul>li>ul>li>ul, #main-nav>ul>li>ul>li>ul>li>ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#main-nav>ul{
+	table-layout: fixed;
+white-space: nowrap;
+}
+#main-nav>ul>li>a{
+	color: #D6D7D8;
+	text-decoration: none;
+}
+#main-nav>ul>li{
+	border-right: 1px solid #384245;
+	display: table-cell;
+}
+#main-nav>ul>li:first-child{
+	border-left: 1px solid #384245;
+}
+#main-navigation>ul>li>a .nav-caption{
+	margin-top:15px;
+}
+#main-nav span.current-item{
+	background-color: #79C142!important;
+	color: #30383B;
+}
+#main-nav span.nav-caption{
+	display: block;
+	font-size: 13px;
+	padding: 10px 8px;
+	transition: 0.1s all;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	background: #30383B;
+}
+#main-nav span.nav-caption:hover{
+	background-color: #F5F5F5;
+	color: #30383B;
+}
+#main-nav .main-nav-title{
+	color: #575757;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+}
+#main-nav span.nav-description{
+	display: block;
+	font-size: 13px;
+}
+#main-nav li:hover>ul.wide-dropdown{
+	display: block;
+}
+#main-nav li.menu-dropdown:hover>ul.wide-dropdown{
+	display: block;
+}
+#main-nav li.menu-dropdown:hover>a span.nav-caption{
+	background-color: #F5F5F5;
+	color: #30383B;
+}
+#main-nav li.menu-dropdown:hover>span{
+	background-color: #F5F5F5;
+	color: #30383B;
+}
+#main-nav .main-search-width ul.wide-dropdown{
+	display: none;
+	z-index: 9999;
+	width: auto;
+	padding: 15px;
+	right: 15px;
+	position: absolute;
+	transition: 0.1s all;
+}
+#main-nav ul.wide-dropdown{
+	display: none;
+	z-index: 9999;
+	width: auto;
+	padding: 15px;
+	position: absolute;
+	transition: 0.1s all;
+}
+#main-nav ul.wide-dropdown>li{
+	float:left;
+	margin-right: 15px;
+}
+#main-nav ul.wide-dropdown>li:last-child {
+	margin-right: 0px;
+}
+#main-nav ul.wide-dropdown ul a{
+	font-size: 13px;
+	text-decoration: none;
+	color: #777777;
+}
+#main-nav ul.wide-dropdown ul a:hover{
+	transition: 0.1s all;
+	color: #79C142;
+}
+#main-nav ul.wide-dropdown{
+	background-color: #F5F5F5!important;
+}
+
+
+
+
+
+
+
+
+#main-nav .main-search-width{
+	width:100%!important;
+}
+#main-nav span.main-search{
+	cursor:pointer;
+	text-align:center;
+	transition: all 0.1s;
+	background:#1abc9c;
+	color: #D6D7D8;
+}
+
+
+
 a.red{
 	background-color: #30383B;
 	color: #D6D7D8!important;
@@ -207,6 +332,10 @@ i.yellow {color:yellow}
 	margin-top: 15px!important;
 	margin-bottom: 15px!important;
 }
+.add-margin{
+	margin-right: 15px!important;
+	margin-left: 15px!important;
+}
 .no-background{
 	background-color: transparent;
 }
@@ -219,4 +348,7 @@ i.yellow {color:yellow}
 }
 .background-2{
 	background-color: #F3F5F6!important;
+}
+.background-3{
+	background-color: #30383B!important;
 }
