@@ -240,7 +240,7 @@ white-space: nowrap;
 	background-color: #F5F5F5;
 	color: #30383B;
 }
-#main-nav .main-search-width ul.wide-dropdown{
+#main-nav .main-search ul.wide-dropdown{
 	display: none;
 	z-index: 9999;
 	width: auto;
@@ -275,26 +275,21 @@ white-space: nowrap;
 }
 #main-nav ul.wide-dropdown{
 	background-color: #F5F5F5!important;
+		transition: 0.1s all;
 }
-
-
-
-
-
-
-
-
-#main-nav .main-search-width{
+#main-nav .main-search{
 	width:100%!important;
 }
-#main-nav span.main-search{
+#main-nav span.main-search-box{
 	cursor:pointer;
 	text-align:center;
 	transition: all 0.1s;
 	background:#1abc9c;
 	color: #D6D7D8;
 }
-
+#main-nav .main-search p{
+	color: #777777;
+}
 
 
 a.red{
